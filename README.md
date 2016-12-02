@@ -2,21 +2,24 @@
 
 Extends console object to present a more useful log output by adding the log type, timestamp, and fancy colors.
 
+![fancy demo](demo.png)
+
 Since this extends the console object, you only need to import & configure it once (probably in your main script) and you're good to go for the whole project.
 
 ## Usage
 
+Install the module by executing `npm i -S formal-console`.
+
 ```js
 var consoleConfig = require('formal-console');
-
-console.log("test", {test: "test"}, new Date());
-console.log("test");
-console.error("some error");
-console.warn("some warning");
-console.info("some info");
-console.debug("some debug");
-console.success("success");
-
+console.log("Hello, World!");
+console.log("test with object", {test: "test"}, new Date());
+console.log("%s: %s", "test with substitution", "ok?");
+console.info("info message, log = info");
+console.warn("something is fishy");
+console.error("something went wrong");
+console.debug("a debugging message");
+console.success("you did it!");
 console.dir({
   test: "test",
   arr: [
@@ -32,15 +35,20 @@ console.dir({
     ]
   }
 });
-console.time("test");
-console.timeEnd("test");
-console.trace("some error");
+console.time("timer test");
+console.timeEnd("timer test");
+console.trace("we detected some serious error and would like a stack trace");
 ```
 
 ## Custom output types
 
+![fancy demo](demo_advanced.png)
+
 ```js
 var consoleConfig = require('formal-console');
+
+// custom date formatting
+consoleConfig.options.dateFormatter = date => date.toLocaleString();
 
 // simple
 consoleConfig.makeSimpleLogger("fancy");
@@ -48,21 +56,21 @@ console.fancy("fancy message");
 
 // custom styling
 var term = require('terminal-kit').terminal;
-consoleConfig.makeSimpleLogger("fancy");
+consoleConfig.makeSimpleLogger("❤️ ");
 // The first style object is for the prefix, and is a terminal-kit object
 // Optional: the second style object is for the message, and is
 // consoleConfig.nativeLog or consoleConfig.nativeError
 consoleConfig.options.styles.fancy[0] = term.bgMagenta.underline.yellow;
-console.fancy("even more fancy message");
+console["❤️ "]("even more fancy message");
 
 // completely custom logic
 consoleConfig.makeCustomLogger("fatal", function() {
   // reuse the standard prefix
-  consoleConfig.printPrefix("fatal", term.error.bgRed.underline.white);
+  consoleConfig.printPrefix("FATAL", term.error.bgRed.underline.white);
   // log normally
   consoleConfig.nativeError.apply(this, arguments);
   // custom logic: trigger a crash
   process.abort();
 });
-console.fatal("test");
+console.fatal("we went too fancy ☹️");
 ```
