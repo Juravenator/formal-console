@@ -1,0 +1,30 @@
+{
+  "name": "formal-console",
+  "version": "1.0.0",
+  "description": "Overrides console functions in Node.js to have a more formal structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "test/test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juravenator/formal-console.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "console",
+    "logging"
+  ],
+  "author": "Glenn Dirkx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juravenator/formal-console/issues"
+  },
+  "homepage": "https://github.com/Juravenator/formal-console#readme",
+  "dependencies": {
+    "moment": "^2.17.0",
+    "stringz": "^0.1.1",
+    "terminal-kit": "^0.25.4"
+  }
+}

@@ -1,0 +1,14 @@
+[43m[37m [WARN]  17/12/95 03:12:04.000 [39m[49m[43m[37m[0m| [39m[49msomething is fishy
+[41m[37m [ERROR] 17/12/95 03:12:04.000 [39m[49m[41m[37m[0m| [39m[49msomething went wrong
+[41m[37m [TRACE] 17/12/95 03:12:04.000 [39m[49m[41m[37m[0m| [39m[49mwe detected some serious error and would like a stack trace
+    at Object.<anonymous> (/Users/glenn/formal-console/test/test.js:43:9)
+    at Module._compile (module.js:573:32)
+    at Object.Module._extensions..js (module.js:582:10)
+    at Module.load (module.js:490:32)
+    at tryModuleLoad (module.js:449:12)
+    at Function.Module._load (module.js:441:3)
+    at Module.runMain (module.js:607:10)
+    at run (bootstrap_node.js:420:7)
+    at startup (bootstrap_node.js:139:9)
+    at bootstrap_node.js:535:3
+[41m[4m[37m [FATAL] 17/12/95 03:12:04.000 [39m[24m[49m[41m[4m[37m[0m| [39m[24m[49mwe went too fancy ☹️
