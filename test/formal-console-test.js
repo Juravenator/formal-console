@@ -5,7 +5,7 @@ var fixedDate = new Date(1995, 11, 17, 3, 24, 4);
 consoleConfig.options.dateFormatter = date => oldFormatter(fixedDate);
 
 console.log("Hello, World!");
-console.log("test with object", {test: "test"}, fixedDate);
+console.log("test with object", {test: "test"}, "a string");
 console.log("%s: %s", "test with substitution", "ok?");
 
 console.info("info message, log = info");
