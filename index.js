@@ -47,7 +47,7 @@ module.exports.makeSimpleLogger = type => {
 module.exports.makeCustomLogger = (type, myfunction) => {
   module.exports.enable(type);
   global.console[type] = function() {
-    if (loggerTypes["error"]) {
+    if (loggerTypes[type]) {
       myfunction.apply(this, arguments);
     }
   };
