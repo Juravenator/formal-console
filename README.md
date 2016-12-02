@@ -1,4 +1,9 @@
 # formal-console
+[![npm version](https://badge.fury.io/js/formal-console.svg)](https://badge.fury.io/js/formal-console)
+[![Build Status](https://travis-ci.org/Juravenator/responsive-columns.svg?branch=master)](https://travis-ci.org/Juravenator/responsive-columns)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Juravenator/formal-console/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Juravenator/formal-console/?branch=master)
+[![Requirements Status](https://requires.io/github/Juravenator/formal-console/requirements.svg?branch=master)](https://requires.io/github/Juravenator/formal-console/requirements/?branch=master)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 Extends console object to present a more useful log output by adding the log type, timestamp, and fancy colors.
 
