@@ -60,7 +60,7 @@ module.exports.makeSimpleLogger("warn");
 module.exports.makeSimpleLogger("success");
 
 module.exports.makeCustomLogger("error", function() {
-  var isTrace = arguments[0] && arguments[0].substring(0, 5) == "Trace";
+  var isTrace = typeof arguments[0] == "string" && arguments[0].substring(0, 5) == "Trace";
   var type = isTrace ? "TRACE" : "ERROR";
   module.exports.printPrefix(type, module.exports.options.styles.error[0]);
   if (isTrace) {
