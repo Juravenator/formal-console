@@ -26,7 +26,7 @@ module.exports.options = {
   },
   // a function that takes a date and returns a string
   // used to print the date in the prefix
-  dateFormatter: date => moment(date).format("D/M/YY HH:MM:ss.SSS")
+  dateFormatter: date => moment(date).format("D/M/YY HH:mm:ss.SSS")
 }
 
 var getLogTypePrefix = type => ` [${type}] ${module.exports.options.typePadding.substring(stringz.length(type) + 4)}`;
