@@ -1,6 +1,6 @@
 {
   "name": "formal-console",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Overrides console functions in Node.js to have a more formal structure",
   "main": "index.js",
   "scripts": {
