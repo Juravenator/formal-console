@@ -43,6 +43,9 @@ console.dir({
 console.time("timer test");
 console.timeEnd("timer test");
 console.trace("we detected some serious error and would like a stack trace");
+consoleConfig.disable('debug');
+console.debug("debug output is disabled, this will do nothing");
+consoleConfig.enable('debug');
 ```
 
 ## Custom output types
